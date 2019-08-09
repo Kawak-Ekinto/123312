@@ -1,0 +1,62 @@
+form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 48%;
+	margin-left: 20px;
+}
+input[name="sms"] {
+	background: #F5F5F5;
+	border: 1px solid #E8E8E8;
+	box-sizing: border-box;
+	border-radius: 2px;
+	width: 97%;
+	font-size: 14px;
+	height: 60px;
+}
+input[class="name"] {
+	background: #F5F5F5;
+	border: 1px solid #E8E8E8;
+	box-sizing: border-box;
+	border-radius: 2px;
+	width: 50%;
+	font-size: 14px;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+._name_double {
+	display: flex;
+}
+._send {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	justify-content: space-between;
+	width: 98%;
+
+}
+.__send {
+	background: #188BFA;
+	border-radius: 2px;
+	border-color: #188BFA;
+	color: #FFF;
+	height: 50px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	width: 50%;
+}
+._check {
+	display: flex;
+	align-items: center;
+}
+.__submit {
+	margin-right: 10px;
+}
