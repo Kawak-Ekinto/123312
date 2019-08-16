@@ -30,6 +30,13 @@ input[class="name"] {
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
+label {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 23px;
+	color: #999999;
+}
 ._name_double {
 	display: flex;
 }
@@ -59,4 +66,7 @@ input[class="name"] {
 }
 .__submit {
 	margin-right: 10px;
+	height: 18px;
+	width: 18px;
+	background-color: #EEEEEE;
 }

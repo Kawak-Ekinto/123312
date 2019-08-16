@@ -9,9 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="../1/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="../1/css/slider.css">
 	<link rel="stylesheet" type="text/css" href="../1/css/form.css">
+	<link rel="stylesheet" type="text/css" href="../1/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="../1/css/owl.theme.default.css">
 </head>
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="../1/js/owl.carousel.js"></script>
 	<div id="container">
 		<div class="first_stage" style="background-image: url(../1/img/first-background.png);  background-repeat: no-repeat; background-position: center;">
 			<div class="first_stair">
@@ -38,27 +41,37 @@
 				</div>
 			</div>
 		</div>
-		<div id="slider">
-    				<div class="slider__wrapper">
-      					<div class="slider__item">
-        					<div>
-        						<img src="../1/img/first-slide.svg">
-        					</div>
-      					</div>
-     					<div class="slider__item">
-        					<div>
-        						<img src="../1/img/second-slide.svg">
-        					</div>
-     					</div>
-      					<div class="slider__item">
-       						<div>
-       							<img src="../1/img/third-slide.svg">
-       						</div>
-      					</div>
-    				</div>
-    				<a class="slider__control slider__control_left" href="#" role="button"></a>
-    				<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
-  		</div>
+		<p class="prev"><</p>
+		<p class="next">></p>
+		<div class="owl-carousel owl-theme">
+ 			<div><img src="../1/img/first-slide.svg"></div>
+ 			<div><img src="../1/img/second-slide.svg"></div>
+ 			<div><img src="../1/img/third-slide.svg"></div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				 $(".owl-carousel").owlCarousel({
+	 				nav: true,
+					loop: true,
+					responsive:{
+	      				0:{
+	       					items:1
+	     				},
+	      				992:{
+	        				items:3
+	      				}  
+	    			}
+				});
+				 owl.owlCarousel();
+				  $('.next').click(function() {
+				    owl.trigger('next.owl.carousel');
+				  });
+				  $('.prev').click(function() {
+				    owl.trigger('prev.owl.carousel', [300]);
+				  });
+			});
+			
+		</script>
   		
   			<div class="algor">
   				<a href="#" class="sub_title"><p>Перейти в портфолио</p></a>
@@ -70,7 +83,7 @@
   				<span class="_we">Почему создание сайтов лучше доверить Seobility. Мы:</span>
   					<div class="_block">
   						<div class="_opis">
-  							<div class="_number" style="background-color: #D7E9FA;">
+  							<div class="_number">
   								<span class="_numb">01.</span>
   							</div>
   							<div class="_text">
@@ -78,7 +91,7 @@
   							</div>
   						</div>
   						<div class="_opis">
-  							<div class="_number" style="background-color: #D7E9FA;">
+  							<div class="_number">
   								<span class="_numb">02.</span>
   							</div>
   							<div class="_text">
@@ -86,7 +99,7 @@
   							</div>
   						</div>
   						<div class="_opis">
-  							<div class="_number" style="background-color: #D7E9FA;">
+  							<div class="_number">
   							<span class="_numb">03.</span>
   							</div>
   							<div class="_text">
@@ -94,7 +107,7 @@
   							</div>
   						</div>
   						<div class="_opis">
-  							<div class="_number" style="background-color: #D7E9FA;">
+  							<div class="_number">
   							<span class="_numb">04.</span>
   							</div>
   							<div class="_text">
@@ -102,7 +115,7 @@
   							</div>
   						</div>
   						<div class="_opis">
-  							<div class="_number" style="background-color: #D7E9FA;">
+  							<div class="_number">
   							<span class="_numb">05.</span>
   							</div>
   							<div class="_text">
@@ -116,160 +129,196 @@
   			</div>
   		</div>
 
-  		<h2 class="why_we">Виды сайтов</h2>
+  	
   		<div class="first_stage">
-  			<div class="second_stair">
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Корпоративные сайты</span>
+  			<h2 class="why_we">Виды сайтов</h2>
+  				<div class="second_stair">
+  					<div class="__opis">
+  						<div class="_title">
+  							<span class="_tit">Корпоративные сайты</span>
+  						</div>
+  						<div class="__text">
+  							<span class="_txt">Многостраничные ресурсы, которые и дают потенциальному клиенту всю нужную информацию об услугах, ценах и новостях компании, и подходит для SEO-продвижения.</span>
+  						</div>
   					</div>
-  					<div class="__text">
-  						<span class="_txt">Многостраничные ресурсы, которые и дают потенциальному клиенту всю нужную информацию об услугах, ценах и новостях компании, и подходит для SEO-продвижения.</span>
+  					<div class="__opis">
+  						<div class="_title">
+  							<span class="_tit">Порталы</span>
+  						</div>
+	  					<div class="__text">
+	  						<span class="_txt">Большие и сложные ресурсы с огромным функционалом таким как: личные кабинеты, форумы, чаты, каталоги, различными фильтрами, сравнениями и уведомлениями, обменами данными в различных форматах и пр. Особое внимание в таких проектах мы уделяем безопасности, скорости работы и SEO составляющей что является ключевыми факторами в дальнейшем продвижении этих ресурсов.</span>
+	  					</div>
+  					</div>
+	  				<div class="__opis">
+	  					<div class="_title">
+	  						<span class="_tit">Интернет-магазины</span>
+	  					</div>
+	  					<div class="__text">
+	  						<span class="_txt">Каталог товаров с корзиной и личным кабинетом, ценами и возможностью заказа. Хотите перенести розничную торговлю в Минске в онлайн и расширить клиентскую базу на всю Беларусь? Интернет-магазин будет кстати.</span>
+	  					</div>
+	  				</div>
+	  				<div class="__opis">
+	  					<div class="_title">
+	  						<span class="_tit">Лендинги</span>
+	  					</div>
+	  					<div class="__text">
+	  						<span class="_txt">Это может быть «визитка» компании или конкретного продукта. Это страница со сжатым, наглядным и понятным предоставлением информации.</span>
+	  					</div>
+	  				</div>
+	  				<div class="__opis">
+	  					<div class="_title">
+	  						<span class="_tit">Онлайн кинотеатры</span>
+	  					</div>
+	  					<div class="__text">
+	  						<span class="_txt">Проекты, требующие специфических компетенций в сфере монетизации трафика, построении интерфейсов, seo требований и десятки других факторов влияющий на успешность проекта.</span>
+	  					</div>
+	  				</div>
+	  				<div class="__opis">
+	  					<div class="_title">
+	  						<span class="_tit">Нестандартные проекты</span>
+	  					</div>
+	  					<div class="__text">
+	  						<span class="_txt">То, что вам нужно, не подходит ни под одну из категорий? Нет нерешаемых задач, поможем с созданием сайтов даже на основе самых смелых идей.</span>
+	  					</div>
   					</div>
   				</div>
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Порталы</span>
-  					</div>
-  					<div class="__text">
-  						<span class="_txt">Большие и сложные ресурсы с огромным функционалом таким как: личные кабинеты, форумы, чаты, каталоги, различными фильтрами, сравнениями и уведомлениями, обменами данными в различных форматах и пр. Особое внимание в таких проектах мы уделяем безопасности, скорости работы и SEO составляющей что является ключевыми факторами в дальнейшем продвижении этих ресурсов.</span>
-  					</div>
-  				</div>
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Интернет-магазины</span>
-  					</div>
-  					<div class="__text">
-  						<span class="_txt">Каталог товаров с корзиной и личным кабинетом, ценами и возможностью заказа. Хотите перенести розничную торговлю в Минске в онлайн и расширить клиентскую базу на всю Беларусь? Интернет-магазин будет кстати.</span>
-  					</div>
-  				</div>
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Лендинги</span>
-  					</div>
-  					<div class="__text">
-  						<span class="_txt">Это может быть «визитка» компании или конкретного продукта. Это страница со сжатым, наглядным и понятным предоставлением информации.</span>
-  					</div>
-  				</div>
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Онлайн кинотеатры</span>
-  					</div>
-  					<div class="__text">
-  						<span class="_txt">Проекты, требующие специфических компетенций в сфере монетизации трафика, построении интерфейсов, seo требований и десятки других факторов влияющий на успешность проекта.</span>
-  					</div>
-  				</div>
-  				<div class="__opis" style="background-color: #F9F9FA;">
-  					<div class="_title">
-  						<span class="_tit">Нестандартные проекты</span>
-  					</div>
-  					<div class="__text">
-  						<span class="_txt">То, что вам нужно, не подходит ни под одну из категорий? Нет нерешаемых задач, поможем с созданием сайтов даже на основе самых смелых идей.</span>
-  					</div>
-  				</div>
-  			</div>
   		</div>
 
-  		<h2 class="why_we">Этапы создания сайта</h2>
+  		
   		<div class="first_stage">
-  			<div class="second_stair">
-  				<div class="_opis_right">
-  					<div class="_back" style="background-image: url(../1/img/step_img_1.svg); background-size: cover; background-repeat: no-repeat;">
-  					</div>
-  					<div class="_cont">
-  						<h2 class="_steps">1 шаг</h2>
-  						<div class="_step">
-  							<span class="_st">Техническое задание и дизайн</span>
-  						</div>
-  						<div class="__step">
-  							<span class="__st">Фиксируем все ключевые параметры проекта в документации, создаем интерактивную презентацию дизайна с возможностью онлайн отслеживания ее изменений. Отдельно на самом первом этапе рисуем мобильную версию сайта.</span>
-  						</div>
-  					</div>
-  				</div>
-  				<div class="_opis_left">
-  					<div class="_back" style="background-image: url(../1/img/step_img_2.svg); background-size: cover; background-repeat: no-repeat;">
-  					</div>
-  					<div class="_cont">
-  						<h2 class="_steps_left">2 шаг</h2>
-  						<div class="_step_left">
-  							<span class="_st">HTML-кодирование и программирование</span>
-  						</div>
-  						<div class="__step_left">
-  							<span class="__st_left">Адаптируем дизайн под все устройства и все браузеры старше 2016 года. Обязщательное выполенние стандарта W3C и Glavweb. Разрабатываем механики проекта, подключаем все самые популярные CMS.<p>Фокус на максимальную управляемость, универсальность, скорость работы. Умеем рабоать с highload-проектами</p></span>
-  						</div>
-  					</div>
-  				</div>
-  				<div class="_opis_right">
-  					<div class="_back" style="background-image: url(../1/img/step_img_3.svg); background-size: cover; background-repeat: no-repeat;">
-  					</div>
-  					<div class="_cont">
-  						<h2 class="_steps">3 шаг</h2>
-  						<div class="_step">
-  							<span class="_st">Тестирование и наполнение</span>
-  						</div>
-  						<div class="__step">
-  							<span class="__st">Тестирование проводят сертифицированные специалисты с трехлетним опытом. Каждая страница сайта проверяется во всех разрешениях и браузерах, на разных типах устройств. Сайт наполняется контентом и переносится на клиентский домен.</span>
-  						</div>
-  					</div>
-  				</div>
-  				<div class="_opis_left">
-  					<div class="_back" style="background-image: url(../1/img/step_img_4.svg); background-size: cover; background-repeat: no-repeat;">
-  					</div>
-  					<div class="_cont">
-  						<h2 class="_steps_left">4 шаг</h2>
-  						<div class="_step_left">
-  							<span class="_st">Гарантия и техническая поддержка</span>
-  						</div>
-  						<div class="__step_left">
-  							<span class="__st_left">Исправляем любые баги бесплатно в течение года после сдачи проекта. Как бонус дарим 3 часа в месяц технической поддержки на решение любых задач целых пол года.</span>
-  						</div>
-  					</div>
-  				</div>
-  			</div>
+  			<h2 class="why_we">Этапы создания сайта</h2>
+	  			<div class="second_stair">
+	  				<div class="_opis_right">
+	  					<div class="_back" style="background-image: url(../1/img/step_img_1.svg); background-size: cover; background-repeat: no-repeat;">
+	  					</div>
+	  					<div class="_cont">
+	  						<h2 class="_steps">1 шаг</h2>
+	  						<div class="_step">
+	  							<span class="_st">Техническое задание и дизайн</span>
+	  						</div>
+	  						<div class="__step">
+	  							<span class="__st">Фиксируем все ключевые параметры проекта в документации, создаем интерактивную презентацию дизайна с возможностью онлайн отслеживания ее изменений. Отдельно на самом первом этапе рисуем мобильную версию сайта.</span>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<div class="_circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  				</div>
+	  				<div class="_opis_left">
+	  					<div class="_back" style="background-image: url(../1/img/step_img_2.svg); background-size: cover; background-repeat: no-repeat;">
+	  					</div>
+	  					<div class="_cont">
+	  						<h2 class="_steps_left">2 шаг</h2>
+	  						<div class="_step_left">
+	  							<span class="_st">HTML-кодирование и программирование</span>
+	  						</div>
+	  						<div class="__step_left">
+	  							<span class="__st_left">Адаптируем дизайн под все устройства и все браузеры старше 2016 года. Обязщательное выполенние стандарта W3C и Glavweb. Разрабатываем механики проекта, подключаем все самые популярные CMS.<p>Фокус на максимальную управляемость, универсальность, скорость работы. Умеем рабоать с highload-проектами</p></span>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<div class="_circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  				</div>
+	  				<div class="_opis_right">
+	  					<div class="_back" style="background-image: url(../1/img/step_img_3.svg); background-size: cover; background-repeat: no-repeat;">
+	  					</div>
+	  					<div class="_cont">
+	  						<h2 class="_steps">3 шаг</h2>
+	  						<div class="_step">
+	  							<span class="_st">Тестирование и наполнение</span>
+	  						</div>
+	  						<div class="__step">
+	  							<span class="__st">Тестирование проводят сертифицированные специалисты с трехлетним опытом. Каждая страница сайта проверяется во всех разрешениях и браузерах, на разных типах устройств. Сайт наполняется контентом и переносится на клиентский домен.</span>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<div class="_circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  				</div>
+	  				<div class="_opis_left">
+	  					<div class="_back" style="background-image: url(../1/img/step_img_4.svg); background-size: cover; background-repeat: no-repeat;">
+	  					</div>
+	  					<div class="_cont">
+	  						<h2 class="_steps_left">4 шаг</h2>
+	  						<div class="_step_left">
+	  							<span class="_st">Гарантия и техническая поддержка</span>
+	  						</div>
+	  						<div class="__step_left">
+	  							<span class="__st_left">Исправляем любые баги бесплатно в течение года после сдачи проекта. Как бонус дарим 3 часа в месяц технической поддержки на решение любых задач целых пол года.</span>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<div class="_circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  					<img src="../1/img/Ellipse.svg" class="__circles">
+	  				</div>
+	  			</div>
   		</div>
-  		<h2 class="why_we">Критерии качества сайта</h2>
-  		<span class="_we">Почему создание сайтов лучше доверить Seobility. Мы:</span>
+  		
   		<div class="first_stage">
-  			<div class="second_stair" style="background-color: #D1E8FE;">
-  				<div class="_list">
-  					<div class="_sub_list" >
-  						<span class="_list_number">01.</span>
-  						<span class="_list_title">Навигация и структура сайта должны быть удобными, понятными и логичными для пользователя.</span>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="second_stair" style="background-color: #D1E8FE;">
-  				<div class="_list">
-  					<div class="_sub_list" >
-  						<span class="_list_number">02.</span>
-  						<span class="_list_title">Сайт должен одинаково выглядеть в любом популярном браузере</span>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="second_stair" style="background-color: #D1E8FE;">
-  				<div class="_list">
-  					<div class="_sub_list" >
-  						<span class="_list_number">03.</span>
-  						<span class="_list_title">Мобильным пользователям (которые составляют не меньше половины аудитории интернет-ресурсов в Беларуси) должен быть доступен тот же функционал, что и десктопным.</span>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="second_stair" style="background-color: #D1E8FE;">
-  				<div class="_list">
-  					<div class="_sub_list" >
-  						<span class="_list_number">04.</span>
-  						<span class="_list_title">Сайт должен быстро грузиться как на быстром компьютере, так и на телефонах и планшетах.</span>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="second_stair" style="background-color: #D1E8FE;">
-  				<div class="_list">
-  					<div class="_sub_list" >
-  						<span class="_list_number">05.</span>
-  						<span class="_list_title">Обновление информации должно быть оперативным и понятным, чтобы с ним справился сотрудник даже с минимальным уровнем компьютерной грамотности.</span>
-  					</div>
-  				</div>
-  			</div>
+  			<h2 class="why_we">Критерии качества сайта</h2>
+  				<span class="_we">Почему создание сайтов лучше доверить Seobility. Мы:</span>
+		  			<div class="second_stair">
+		  				<div class="_list">
+		  					<div class="_sub_list" >
+		  						<span class="_list_number">01.</span>
+		  						<span class="_list_title">Навигация и структура сайта должны быть удобными, понятными и логичными для пользователя.</span>
+		  					</div>
+		  				</div>
+		  			
+		  			
+		  				<div class="_list">
+		  					<div class="_sub_list" >
+		  						<span class="_list_number">02.</span>
+		  						<span class="_list_title">Сайт должен одинаково выглядеть в любом популярном браузере</span>
+		  					</div>
+		  				</div>
+		  			
+		  				<div class="_list">
+		  					<div class="_sub_list" >
+		  						<span class="_list_number">03.</span>
+		  						<span class="_list_title">Мобильным пользователям (которые составляют не меньше половины аудитории интернет-ресурсов в Беларуси) должен быть доступен тот же функционал, что и десктопным.</span>
+		  					</div>
+		  				</div>
+		  			
+		  				<div class="_list">
+		  					<div class="_sub_list" >
+		  						<span class="_list_number">04.</span>
+		  						<span class="_list_title">Сайт должен быстро грузиться как на быстром компьютере, так и на телефонах и планшетах.</span>
+		  					</div>
+		  				</div>
+		  			
+		  				<div class="_list">
+		  					<div class="_sub_list" >
+		  						<span class="_list_number">05.</span>
+		  						<span class="_list_title">Обновление информации должно быть оперативным и понятным, чтобы с ним справился сотрудник даже с минимальным уровнем компьютерной грамотности.</span>
+		  					</div>
+		  				</div>
+		  			</div>
   		</div>
 		<h2 class="why_we">Готовы начать сотрудничество?</h2>
   		<span class="_we">Отлично. Свяжитесь с нами удобным образом - и приступим к делу.</span>
@@ -279,15 +328,15 @@
   		<div class="first_stage">
   			 	<div class="second_stair">
   			 		<div class="_logo">
-  			 			<div><img src="../1/img/adrex.svg" class="adrex"></div>
-  						<div><img src="../1/img/SportFit.svg" class="sport"></div>
-  						<div><img src="../1/img/euro.svg" class="euro"></div>
-  						<div><img src="../1/img/agat.svg" class="agat"></div>
-  						<div><img src="../1/img/fin.svg" class="fin"></div>
-  						<div><img src="../1/img/muz.svg" class="myz"></div>
-  						<div><img src="../1/img/kovr.svg" class="kovr"></div>
-  						<div><img src="../1/img/per.svg" class="per"></div>
-  						<div><img src="../1/img/miners.svg" class="miners"></div>
+  			 			<div><a href="#"><img src="../1/img/adrex.svg" class="adrex"></a></div>
+  						<div><a href="#"><img src="../1/img/SportFit.svg" class="sport"></a></div>
+  						<div><a href="#"><img src="../1/img/euro.svg" class="euro"></a></div>
+  						<div><a href="#"><img src="../1/img/agat.svg" class="agat"></a></div>
+  						<div><a href="#"><img src="../1/img/fin.svg" class="fin"></a></div>
+  						<div><a href="#"><img src="../1/img/muz.svg" class="myz"></a></div>
+  						<div><a href="#"><img src="../1/img/kovr.svg" class="kovr"></a></div>
+  						<div><a href="#"><img src="../1/img/per.svg" class="per"></a></div>
+  						<div><a href="#"><img src="../1/img/miners.svg" class="miners"></a></div>
   			 		</div>
   			 		
   			 			<form>
