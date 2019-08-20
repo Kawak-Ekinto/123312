@@ -61,6 +61,84 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  .owl-nav,
+  .owl-nav {
+    height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 999;
+  filter: blur(1px);
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-prev {
+  background-color: white;
+  opacity: 0.8;
+  float: left;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 38px;
+  transition: all 0.2s;
+}
+.owl-nav .owl-prev:before,
+.owl-nav .owl-prev:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100px;
+  height: 100%;
+  background: url("../img/left-arrow.svg") 10% 50% no-repeat;
+  background-color: white;
+}
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-prev:hover {
+  transition: all 0.2s;
+  background-color: #fff;
+}
+.owl-nav .owl-next,
+.owl-nav .owl-next {
+  background-color: white;
+  opacity: 0.8;
+  float: right;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 38px;
+  transition: all 0.2s;
+}
+.owl-nav .owl-next:before,
+.owl-nav .owl-next:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100px;
+  height: 100%;
+  background: url("../img/right-arrow.svg") 90% 50% no-repeat;
+  background-color: white;
+}
+.owl-nav .owl-next:hover,
+.owl-nav .owl-next:hover {
+  transition: all 0.2s;
+  background-color: white;
+}
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next,
   .owl-carousel button.owl-dot {

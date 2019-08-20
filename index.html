@@ -41,34 +41,21 @@
 				</div>
 			</div>
 		</div>
-		<p class="prev"><</p>
-		<p class="next">></p>
 		<div class="owl-carousel owl-theme">
  			<div><img src="../1/img/first-slide.svg"></div>
- 			<div><img src="../1/img/second-slide.svg"></div>
  			<div><img src="../1/img/third-slide.svg"></div>
+ 			<div><img src="../1/img/second-slide.svg"></div>
 		</div>
 		<script type="text/javascript">
 			$(function() {
 				 $(".owl-carousel").owlCarousel({
 	 				nav: true,
 					loop: true,
-					responsive:{
-	      				0:{
-	       					items:1
-	     				},
-	      				992:{
-	        				items:3
-	      				}  
-	    			}
+					items: 1,
+					stagePadding: 300,
+					autoHeight: true,
 				});
-				 owl.owlCarousel();
-				  $('.next').click(function() {
-				    owl.trigger('next.owl.carousel');
-				  });
-				  $('.prev').click(function() {
-				    owl.trigger('prev.owl.carousel', [300]);
-				  });
+				 
 			});
 			
 		</script>
